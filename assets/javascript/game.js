@@ -1,7 +1,13 @@
 
 var random_result;
-var lost;
-var win;
+var lost = 0;
+var win = 0;
+var previous = 0;
+//Setters
+//Getters
+
+//$(".crystal").attr('class', 'red') //setting a value 
+
 
 // Game with 4 crystals and Random result
 // Every crystal needs to have a random number between 1 - 12
@@ -24,15 +30,32 @@ for(var i = 0; i < 4; i++){
 	$(".crystals").append(crystal);
 
 }
-
+// When clicking any crystal, it should add with the previous
 $(".crystal").on('click', function () {
-	console.log($(this));
+
+	var result;
+	
+	var num = parseInt($(this).attr('data-random'));//Getters: this is getting the value from this
+// parseInt will parse a string argument and return an integer
+
+	previous += num;
+	console.log(previous);
+	if(previous > random_result){
+		console.log("You lost!!");
+
+	}
+	else if(previous === random_result){
+		console.log("You win!!");
+	}
+	
+
+	
 
 });
 
 // A new random number should be generated every time we win or lose
 // to those 4 crystals
-// When clicking any crystal, it should add with the previous
+
 // Until it equals the randomResult
 // If it is greater than the Random Result, we decrement a lost counter
 // If it is equal, then we increment a win counter
