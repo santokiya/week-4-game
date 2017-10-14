@@ -11,7 +11,8 @@ var previous = 0;
 
 // Game with 4 crystals and Random result
 // Every crystal needs to have a random number between 1 - 12
-random_result = Math.floor(Math.random() * 69) + 30; //hoisting
+var startGame = function () {
+	random_result = Math.floor(Math.random() * 69) + 30; //hoisting
 
 console.log(random_result)
 
@@ -35,17 +36,23 @@ $(".crystal").on('click', function () {
 
 	var result;
 	
+
+	
 	var num = parseInt($(this).attr('data-random'));//Getters: this is getting the value from this
 // parseInt will parse a string argument and return an integer
 
 	previous += num;
 	console.log(previous);
 	if(previous > random_result){
-		console.log("You lost!!");
+		lost--;
+
+		$("#lost").html(lost);
 
 	}
 	else if(previous === random_result){
-		console.log("You win!!");
+		win++;
+
+		$("#win").html(win);
 	}
 	
 
