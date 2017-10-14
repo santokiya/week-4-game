@@ -3,6 +3,7 @@ var random_result;
 var lost = 0;
 var win = 0;
 var previous = 0;
+var audio = new Audio("https://www.soundsnap.com/lowtide_62_c_m_lead_ss_wav");
 //Setters
 //Getters
 
