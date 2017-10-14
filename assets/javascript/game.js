@@ -3,16 +3,19 @@ var random_result;
 var lost;
 var win;
 
-
-random_result = Math.floor(Math.random() * 60) + 30; //hoisting
+// Game with 4 crystals and Random result
+// Every crystal needs to have a random number between 1 - 12
+random_result = Math.floor(Math.random() * 69) + 30; //hoisting
 
 console.log(random_result)
 
-$("#result").html('Random Result: ');
+$("#result").html('Random Result: ' + random_result);
+
 for(var i = 0; i < 4; i++){
 
-	var random = Math.floor(Math.random() * 12);
-	console.log(random);
+	var random = Math.floor(Math.random() * 11) + 1; //shouldn't start from 0 should start from 1
+	//console.log(random);
+
 	var crystal = $("<div>");
 		crystal.attr({
 			"class": 'crystal',
@@ -22,9 +25,11 @@ for(var i = 0; i < 4; i++){
 
 }
 
+$(".crystal").on('click', function () {
+	console.log($(this));
 
-// Game with 4 crystals and Random result
-// Every crystal needs to have a random number between 1 - 12
+});
+
 // A new random number should be generated every time we win or lose
 // to those 4 crystals
 // When clicking any crystal, it should add with the previous
