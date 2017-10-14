@@ -3,9 +3,9 @@ var random_result;
 var lost = 0;
 var win = 0;
 var previous = 0;
-var audio = new Audio("https://www.soundsnap.com/lowtide_62_c_m_lead_ss_wav");
-//Setters
-//Getters
+
+//Setters??
+//Getters??
 
 //$(".crystal").attr('class', 'red') //setting a value 
 
@@ -55,6 +55,7 @@ resetAndStart ();
 
 // Event Delegation
 $(document).on('click', ".crystal", function () {
+
 
 
 	
