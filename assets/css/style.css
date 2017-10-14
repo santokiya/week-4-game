@@ -1,4 +1,9 @@
 
+body {
+	background-image: url("http://i0.kym-cdn.com/photos/images/original/000/996/801/567.gif");
+   
+    color: white;
+}
 
 .crystals{
 		display: flex;
@@ -10,4 +15,18 @@
 		border: 1px solid green;
 		height: 200px;
 		width: 200px;
+		border-radius: 4px
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+		transition: box-shadow 1s, transform 2s;
+}
+
+.crystal:hover{
+		box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+		transform: translate(5px, 50px);
+		cursor: pointer;
+		transition: box-shadow 1s, transform 2s;
+}
+img{
+	width:50px;
+
 }
