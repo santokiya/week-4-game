@@ -4,7 +4,7 @@ var lost;
 var win;
 
 
-random_result = Math.floor(Math.random() * 99) + 30; //hoisting
+random_result = Math.floor(Math.random() * 60) + 30; //hoisting
 
 console.log(random_result)
 
